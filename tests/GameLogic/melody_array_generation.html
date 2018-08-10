@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body onload="generateRandomNote()">
+
+<p>Click the button to add a new element to the array.</p>
+
+<button onclick="generateRandomNote()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var result = [];
+var myArray = [1,1,2,3,4,4,5,5,6,7];
+document.getElementById("demo").innerHTML = result;
+
+
+function generateRandomNote() {
+    var rand = myArray[Math.floor(Math.random() * myArray.length)];
+    result.push(rand);
+    document.getElementById("demo").innerHTML = result;
+    console.log(result);
+}
+</script>
+
+</body>
+</html>

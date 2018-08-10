@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EchoSlam WebaudioTest1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EchoSlam">
+    <meta name="author" content="TCWP">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- External stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="newcircles.css">
+    <link rel="stylesheet" href="bc.css">
+
+</head>
+<body>
+  <header>
+    <h2><a href="#">Echo Slam</a></h2>
+
+    <nav>
+      <li><a href="#">About</a></li>
+      <li><a href="#"><i class="fa fa-bars"></i></a></li>
+    </nav>
+ </header>
+
+ <section class="landing">
+    <div class="landing-content-area">
+
+
+      <ul class='circle-container'>
+    <audio id="sound1" src="http://localhost/05%20web_audio/d3d.wav" preload="auto"></audio>
+    <audio id="sound2" src="http://localhost/05%20web_audio/e3d.wav" preload="auto"></audio>
+
+        <li class="circ b1" onclick="document.getElementById('sound1').play();"></li>
+        <li class="circ b2" onclick="document.getElementById('sound2').play();"></li>
+        <li class="circ b3"></li>
+        <li class="circ b1"></li>
+        <li class="circ b2"></li>
+        <li class="circ b3"></li>
+        <li class="circ b2"></li>
+      </ul>
+  </div>
+  </section>
+<footer>
+    <p>by Thomas Perryman</p>
+    <ul>
+      <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+      <li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+      <li><a href="#"><i class="fa fa-snapchat-square fa-2x"></i></a></li>
+    </ul>
+  </footer>
+
+<script type="text/javascript">
+// var audioContext = new(window.AudioContext || window.webkitAudioContext)(),
+//     sampleBuffer, sound, playButton = document.querySelector('.play'),
+//     loop = false,
+
+window.onload = init;
+var context;
+var bufferLoader;
+
+function init() {
+  // Fix up prefixing
+  window.AudioContext = window.AudioContext || window.webkitAudioContext;
+  context = new AudioContext();
+
+  bufferLoader = new BufferLoader(
+    context,
+    [
+      'http://localhost/05%20web_audio/d3d.wav',
+      'http://localhost/05%20web_audio/e3d.wav',
+    ],
+    finishedLoading
+    );
+
+  bufferLoader.load();
+}
+
+function finishedLoading(bufferList) {
+  // Create two sources and play them both together.
+  var source1 = context.createBufferSource();
+  var source2 = context.createBufferSource();
+  source1.buffer = bufferList[0];
+  source2.buffer = bufferList[1];
+
+  source1.connect(context.destination);
+  source2.connect(context.destination);
+  source1.start(0);
+  source2.start(0);
+}
+</script>
+
+
+  <script src="webaudio.js"></script>
+
+
+</ul>
+</body>
+</html>
+
+

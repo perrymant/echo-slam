@@ -1,0 +1,75 @@
+body {
+    /*display: inline;*/
+}
+
+.circ {
+    /*position: relative;*/
+/*    top: calc(50% - 150px);
+    left: calc(50% - 150px);*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #002;
+}
+.b1 {
+    box-shadow:
+    inset 0 0 50px #94ae7640,
+    inset 20px 0 80px #6fff0040,
+    inset -20px 0 80px #0ff4,
+    inset 20px 0 300px #63ff0040,
+    inset -20px 0 300px #00ffff40, 0 0 50px #50d7cb7d, -10px 0 80px #00ffae40, 10px 0 80px #0ff4;
+    transition: all 0.3s ease-in-out, color 0.1s, background 0.1s;
+    }
+
+.b1:hover {
+    background-color: #8AFA0F30;
+    box-shadow: inset 0 0 50px #81B52A, inset 20px 0 80px #EBE02E, inset -20px 0 80px #8FE, inset 20px 0 300px #A7EB00, inset -20px 0 300px #0ff, 0 0 50px #92DE8A7D, -10px 0 80px #00ffae, 10px 0 80px #5F9;
+    transition: all 0.3s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.b1:active {
+    background-color: #8afa0f;
+    box-shadow: inset 0 0 50px #81B52A, inset 20px 0 80px #EBE02E, inset -20px 0 80px #8FE, inset 20px 0 300px #A7EB00, inset -20px 0 300px #0ff, 0 0 50px #92DE8A7D, -10px 0 80px #00ffae, 10px 0 80px #5F9;
+    transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.b2 {
+    box-shadow:
+    inset 0 0 50px #545BB140,
+    inset 20px 0 80px #9CFBA340,
+    inset -20px 0 80px #67F4,
+    inset 20px 0 300px #FBC89C40,
+    inset -20px 0 300px #8FCAFF40, 0 0 50px #533CDA7D, -10px 0 80px #FF79E440, 10px 0 80px #AFE4;
+    transition: all 0.3s ease-in-out, color 0.1s, background 0.1s;
+    }
+
+.b2:hover {
+    background-color: #1700ff33;
+    box-shadow: inset 0 0 50px #2318B8, inset 20px 0 80px #565ef9, inset -20px 0 80px #64cd75, inset 20px 0 300px #221ce8, inset -20px 0 300px #423cff, 0 0 50px #0c2bffc4, -10px 0 80px #13b7ca, 10px 0 80px #851985;
+    transition: all 0.3s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.b2:active {
+    background-color: #8afa0f;
+    box-shadow: inset 0 0 50px #81B52A, inset 20px 0 80px #EBE02E, inset -20px 0 80px #8FE, inset 20px 0 300px #A7EB00, inset -20px 0 300px #0ff, 0 0 50px #92DE8A7D, -10px 0 80px #00ffae, 10px 0 80px #5F9;
+    transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.b3 {
+    box-shadow: inset 0 0 50px #e002029e, inset 20px 0 80px #562a314f, inset -20px 0 80px #ff666657, inset 20px 0 300px #f1440a69, inset -20px 0 300px #961b1b47, 0 0 50px #ad070785, -10px 0 80px #e64d5d75, 10px 0 80px #b31414ad;
+    transition: all 0.1s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.b3:hover {
+    background-color: #ff000057;
+    box-shadow: inset 0 0 50px #8e0707, inset 20px 0 80px #f71010c4, inset -20px 0 80px #e41746bf, inset 20px 0 300px #f1440a69, inset -20px 0 300px #e41818c9, 0 0 50px #dc4b14d6, -10px 0 80px #cd4747a6, 10px 0 80px #850d5085;
+    transition: all 0.1s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.b3:active {
+    background-color: #fa680f;
+    box-shadow: inset 0 0 50px #ff5c0099, inset 20px 0 80px #f90000, inset -20px 0 80px #d60f23, inset 20px 0 300px #eb0000, inset -20px 0 300px #ff0000, 0 0 50px #ff221cc7, -10px 0 80px #ea0e0ee0, 10px 0 80px #7bea95;
+    transition: all 0.1s cubic-bezier(0.44, -0.54, 0.8, 2.1), color 0.1s, background 0.1s;
+}
+
+

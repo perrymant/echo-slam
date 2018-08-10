@@ -1,0 +1,63 @@
+/*style="transform: rotate(0deg);"
+style="transform: rotate(-51.4286deg);"
+style="transform: rotate(-102.857deg);"
+style="transform: rotate(-154.286deg);"
+style="transform: rotate(-205.714deg);"
+style="transform: rotate(-257.143deg);"
+style="transform: rotate(-308.571deg);"
+*/
+.circle-container {
+  position: relative;
+  /* 1 */
+  width: 20em;
+  height: 20em;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  /* 2 */
+  box-sizing: content-box;
+  /* 3 */
+  margin: 5em auto 0;
+  /*border: solid 5px tomato;*/
+}
+.circle-container > * {
+  /* 4 */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10em;
+  height: 10em;
+  margin: -3em;
+}
+.circle-container > :nth-of-type(1) {
+  transform: rotate(270deg) translate(10em) rotate(-270deg);
+}
+.circle-container > :nth-of-type(2) {
+  transform: rotate(321.4286deg) translate(10em) rotate(-321.4286deg);
+}
+.circle-container > :nth-of-type(3) {
+  transform: rotate(372.857deg) translate(10em) rotate(-372.857deg);
+}
+.circle-container > :nth-of-type(4) {
+  transform: rotate(424.286deg) translate(10em) rotate(-424.286deg);
+}
+.circle-container > :nth-of-type(5) {
+  transform: rotate(475.714deg) translate(10em) rotate(-475.714deg);
+}
+.circle-container > :nth-of-type(6) {
+  transform: rotate(527.143deg) translate(10em) rotate(-527.143deg);
+}
+.circle-container > :nth-of-type(7) {
+  transform: rotate(578.571deg) translate(10em) rotate(-578.571deg);
+}
+
+.circle-container img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+.circle-container img:hover {
+  filter: grayscale(0);
+}

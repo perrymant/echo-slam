@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var user_array = [];
+        function userFillArray(button) {
+            var button_value = button.getAttribute("data-button_value");
+            user_array.push(button_value);
+            document.getElementById("userArray").innerHTML = user_array;
+            // alert("The " + button.innerHTML + " is a " + button_value + ".");
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>User Fill Array</h1>
+    <p>Click on a button:</p>
+
+    <ul>
+      <li onclick="userFillArray(this)" id="b1" data-button_value="1">b1</li>
+      <li onclick="userFillArray(this)" id="b2" data-button_value="2">b2</li>
+      <li onclick="userFillArray(this)" id="b3" data-button_value="3">b3</li>
+      <li onclick="userFillArray(this)" id="b4" data-button_value="4">b4</li>
+      <li onclick="userFillArray(this)" id="b5" data-button_value="5">b5</li>
+      <li onclick="userFillArray(this)" id="b6" data-button_value="6">b6</li>
+      <li onclick="userFillArray(this)" id="b7" data-button_value="7">b7</li>
+    </ul>
+
+    <p id="userArray"></p>
+
+
+</body>
+</html>

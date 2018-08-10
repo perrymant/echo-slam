@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang=en-gb>
+<head>
+  <meta charset=UTF-8>
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <title>Web Audio API</title>
+  <meta name=description content="Web Audio API mp3 loader stand-alone demo">
+  <link rel=canonical href="http://websemantics.uk/articles/web-audio-api/">
+  <meta name=robots content=noindex>
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
+
+  <style id=not_required_just_tidy_like>
+
+    html{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+    *,:after,:before{-moz-box-sizing:inherit;-webkit-box-sizing:inherit;box-sizing:inherit}
+    html{font:16px/1.5 sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+    body,button{text-rendering:optimizeLegibility}
+    body{background-color:#FDFDFD;color:#3a2c49;margin:0}
+    h1,h2{color:#4B3D5A;font-weight:normal}
+    h1{font-size:26px;margin:.67em 0}
+    h2{font-size:22px}
+    a{background:transparent;color:#236ECE;text-decoration:none}
+    a:hover,a:focus,a:active{color:#014cac}
+    p a:hover,a:focus,li a:hover,a:focus{text-decoration:underline;outline:0}
+    header,.tall-content{background-color:rgba(35,110,206,.15)}
+    header,.content{padding:4.236rem}
+    .tall-content{height:50vh;margin:50vh 0}
+    nav a{display:block;line-height:4.236rem;background-color:#4B3D5A;color:#fff;text-align:center;text-decoration:none}
+    nav a:hover,nav a:focus{color:#fff;text-decoration:underline}
+
+    button {
+      font:inherit;
+      padding:.618rem 1rem;
+      border: 1px solid #ccc;
+      border-radius:4px;
+      cursor: pointer;
+      background-color: #eee;
+    }
+    button:hover,
+    button:focus {background-color:#fff}
+    button:active {background-color:#3a2c49;color:#fff}
+  </style>
+
+
+
+  <script>
+
+    // UNUSED but interesting
+
+function BufferLoader(context, urlList, callback) {
+  this.context = context;
+  this.urlList = urlList;
+  this.onload = callback;
+  this.bufferList = new Array();
+  this.loadCount = 0;
+}
+
+BufferLoader.prototype.loadBuffer = function(url, index) {
+  // Load buffer asynchronously
+  var request = new XMLHttpRequest();
+  request.open("GET", url, true);
+  request.responseType = "arraybuffer";
+
+  var loader = this;
+
+  request.onload = function() {
+    // Asynchronously decode the audio file data in request.response
+    loader.context.decodeAudioData(
+      request.response,
+      function(buffer) {
+        if (!buffer) {
+          alert('error decoding file data: ' + url);
+          return;
+        }
+        loader.bufferList[index] = buffer;
+        if (++loader.loadCount == loader.urlList.length)
+          loader.onload(loader.bufferList);
+      },
+      function(error) {
+        console.error('decodeAudioData error', error);
+      }
+    );
+  }
+
+  request.onerror = function() {
+    alert('BufferLoader: XHR error');
+  }
+
+  request.send();
+}
+
+BufferLoader.prototype.load = function() {
+  for (var i = 0; i < this.urlList.length; ++i)
+  this.loadBuffer(this.urlList[i], i);
+}
+
+  </script>
+
+</head>
+<body>
+  <main>
+
+    <header>
+      <h1>Web Audio API - mp3 loader stand-alone demo</h1>
+      <p><a href="http://websemantics.uk/articles/web-audio-api/">The full Web Audio API article</a></p>
+      <p>All required files are annotated and self-contained within this page (apart from the audio samples).</p>
+    </header>
+
+    <div class=content>
+      <button onclick="sound1.play();">Play sound</button>
+      <button onclick="typingSound.play({volume:.2});">Play typing sound</button>
+
+      <br><br>
+
+      <button onclick="saxyFrenchSound.play({loop : true, volume : 0.2});">Play saxy french loop</button>
+      <button onclick="saxyFrenchSound.stop();">Stop saxy french loop</button>
+
+      <br><br>
+
+      <button onclick="greaseMonkeySound.play({loop : true, volume : 0.4});">Play grease monkey loop</button>
+      <button onclick="greaseMonkeySound.stop();">Stop grease monkey loop</button>
+
+
+    </div>
+
+  </main>
+
+
+
+
+  <script>
+
+try {
+  window.AudioContext = window.AudioContext || window.webkitAudioContext;
+  window.audioContext = new window.AudioContext();
+} catch (e) {
+  console.log("No Web Audio API support");
+}
+
+// WebAudioAPISoundManager Constructor
+
+var WebAudioAPISoundManager = function (context) {
+  this.context = context;
+  this.bufferList = {};
+  this.playingSounds = {};
+};
+
+
+// WebAudioAPISoundManager Prototype
+
+WebAudioAPISoundManager.prototype = {
+
+  addSound: function (url) {
+
+    // Load buffer asynchronously
+    var request = new XMLHttpRequest();
+    request.open("GET", url, true);
+    request.responseType = "arraybuffer";
+
+    var self = this;
+
+    request.onload = function () {
+
+      // Asynchronously decode the audio file data in request.response
+      self.context.decodeAudioData(
+        request.response,
+
+        function (buffer) {
+          if (!buffer) {
+            alert('error decoding file data: ' + url);
+            return;
+          }
+          self.bufferList[url] = buffer;
+        });
+    };
+
+    request.onerror = function () {
+      console.log('BufferLoader: XHR error');
+    };
+
+    request.send();
+  },
+
+  stopSoundWithUrl: function(url) {
+    if (this.playingSounds.hasOwnProperty(url)) {
+      for (var i in this.playingSounds[url]) {
+        if (this.playingSounds[url].hasOwnProperty(i)) {
+          this.playingSounds[url][i].stop();
+        }
+      }
+    }
+  }
+};
+
+
+// WebAudioAPISound Constructor
+
+ var WebAudioAPISound = function (url) {
+  this.url = url + '.mp3';
+  window.webAudioAPISoundManager = window.webAudioAPISoundManager || new WebAudioAPISoundManager(window.audioContext);
+  this.manager = window.webAudioAPISoundManager;
+  this.manager.addSound(this.url);
+};
+
+
+// WebAudioAPISound Prototype
+
+WebAudioAPISound.prototype = {
+
+  play: function (options) {
+    var buffer = this.manager.bufferList[this.url];
+
+    this.settings = {
+      loop: false,
+      volume: 0.5
+    };
+
+    for(var i in options){
+      if (options.hasOwnProperty(i)) {
+        this.settings[i] = options[i];
+      }
+    }
+
+    //Only play if it's loaded yet
+    if (typeof buffer !== "undefined") {
+      var source = this.makeSource(buffer);
+      source.loop = this.settings.loop;
+      source.start(0);
+
+      if (!this.manager.playingSounds.hasOwnProperty(this.url)) {
+        this.manager.playingSounds[this.url] = [];
+      }
+      this.manager.playingSounds[this.url].push(source);
+    }
+  },
+
+  stop: function () {
+    this.manager.stopSoundWithUrl(this.url);
+  },
+
+  makeSource: function (buffer) {
+    var source = this.manager.context.createBufferSource();
+    var gainNode = this.manager.context.createGain();
+    gainNode.gain.value = this.settings.volume;
+    source.buffer = buffer;
+    source.connect(gainNode);
+    gainNode.connect(this.manager.context.destination);
+    return source;
+  }
+
+};
+
+
+var sound1 = new WebAudioAPISound("http://localhost/05%20web_audio/d3d");
+var pagefeedSound = new WebAudioAPISound("/audio/pagefeed");
+
+var saxyFrenchSound = new WebAudioAPISound("saxy_french_1");
+var greaseMonkeySound = new WebAudioAPISound("grease_monkey");
+
+// saxyFrenchSound.play({loop : true, volume : 0.8});
+// pagefeedSound.play();
+// typingSound.play({volume : 0.2});
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var result_array = [];
+        var user_array = [];
+        var note_statistics = [1,1,2,3,4,4,5,5,6,7];
+        var play_count = -1;
+        var level_count = 0;
+        var player_score = 0;
+        var result_value = result_array[play_count];
+
+        function generateRandomNote() {
+            var rand = note_statistics[Math.floor(Math.random() * note_statistics.length)];
+            result_array.push(rand);
+            document.getElementById("result_array").innerHTML = result_array;
+            play_count += 1;
+        }
+
+        function userFillArray(button) {
+            var button_value = button.getAttribute("data-button_value");
+            user_array.push(button_value);
+            document.getElementById("user_array").innerHTML = user_array;
+            create_next_note()
+        }
+
+        function run_level() {
+            var button_value = button.getAttribute("data-button_value");
+            for (i = 0; i < level_count; i++) {
+                if (button_value == result_array[i]) {
+                  score += 1;
+                  document.getElementById("score_display").innerHTML = score;
+                }
+            }
+        }
+
+        // function create_next_note() {
+        //   if (result_array[play_count] == user_array[play_count]) {
+        //       generateRandomNote();
+        //   }
+        //   else {
+        //     gameOver();
+        //   }
+        // }
+
+        function gameOver() {
+          document.getElementById("result_array").innerHTML = "GAMEOVER";
+        }
+    </script>
+
+</head>
+
+<body onload="generateRandomNote()">
+
+<p>Click the button to add a new element to the array.</p>
+<button onclick="generateRandomNote()">Try it</button>
+<p id="result_array"></p>
+
+
+ <h1>User Fill Array</h1>
+    <p>Click on a button:</p>
+    <ul>
+      <li onclick="userFillArray(this)" id="b1" data-button_value="1">b1</li>
+      <li onclick="userFillArray(this)" id="b2" data-button_value="2">b2</li>
+      <li onclick="userFillArray(this)" id="b3" data-button_value="3">b3</li>
+      <li onclick="userFillArray(this)" id="b4" data-button_value="4">b4</li>
+      <li onclick="userFillArray(this)" id="b5" data-button_value="5">b5</li>
+      <li onclick="userFillArray(this)" id="b6" data-button_value="6">b6</li>
+      <li onclick="userFillArray(this)" id="b7" data-button_value="7">b7</li>
+    </ul>
+    <p id="user_array"></p>
+
+score display
+    <p id="score_display"></p>
+
+</body>
+</html>
