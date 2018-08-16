@@ -153,7 +153,7 @@ header nav li {
     position: relative;
     justify-content: center;
     text-align: center;
-    min-height: 100vh;
+    min-height: 100vh; /*100vh?*/
     color: #fff;
     /*background-color: #78a5de;*/
 }
@@ -166,7 +166,6 @@ header nav li {
     height: 100%;
     background-size: cover;
     z-index: -1;
-    background-color: #80a3db;
 }
 
 .landing h1 {
@@ -198,7 +197,7 @@ header nav li {
 
 @media (max-width: 800px) {
     .landing {
-        min-height: 800px;
+        min-height: 610px; /*800?*/
     }
 
     .landing h1 {
