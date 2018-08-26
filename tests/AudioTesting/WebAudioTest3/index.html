@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EchoSlam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EchoSlam">
+  <meta name="author" content="TCWP">
+  <meta charset="utf-8">
+  <!-- External stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="attributes/styles.css">
+  <link rel="stylesheet" href="attributes/newcircles.css">
+  <link rel="stylesheet" href="attributes/bc.css">
+  <script src="webaudio3.js"></script>
+</head>
+<body>
+  <header>
+    <h2><a href="#">Echo Slam</a></h2>
+
+    <nav>
+      <li><a href="#">About</a></li>
+      <li><a href="#"><i class="fa fa-bars"></i></a></li>
+    </nav>
+  </header>
+  <section class="landing">
+    <div class="landing-content-area">
+      <ul class='circle-container'>
+        <audio id="sound1" src="http://localhost/05%20web_audio/d3d.wav" preload="auto"></audio>
+        <audio id="sound2" src="http://localhost/05%20web_audio/e3d.wav" preload="auto"></audio>
+
+        <li class="circ b1" onclick="document.getElementById('sound1').play();"></li>
+        <li class="circ b2" onclick="document.getElementById('sound2').play();"></li>
+        <li class="circ b3"></li>
+        <li class="circ b4"></li>
+        <li class="circ b5"></li>
+        <li class="circ b6"></li>
+        <li class="circ b7"></li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <p>by Thomas Perryman</p>
+    <ul>
+      <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+      <li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+      <li><a href="#"><i class="fa fa-snapchat-square fa-2x"></i></a></li>
+    </ul>
+  </footer>
+
+<!--   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="extra/game.js"></script> -->
+</body>
+</html>

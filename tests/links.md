@@ -39,3 +39,4 @@ https://www.youtube.com/watch?v=oaemcUfcYcg
 https://gist.github.com/Nilpo/8ed5e44be00d6cf21f22
 
 
+http://masf-html5.blogspot.com/2016/04/html5-audio-most-useful-filter-nodes.html
