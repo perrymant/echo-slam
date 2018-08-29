@@ -83,7 +83,7 @@ box-shadow: inset 0 0 50px #66dd664a, inset 20px 0 80px #05fcf42b, inset -20px 0
     transition: all 0.1s cubic-bezier(0.68, 0.02, 0.05, 2.16), color 0.1s, background 0.2s;
 }
 
-#b4activate {
+.b4activate {                       /* needs to be a class */
     background-color: #6d66;
     box-shadow: inset 0 0 50px #66dd666b, inset 20px 0 80px #05fc5d5c, inset -20px 0 80px #69dd6647, inset 20px 0 300px #66dd6659, inset -20px 0 300px #44e23969, 0 0 50px #6ef38266, -10px 0 80px #2dd96259, 10px 0 80px #7affa0b0;
     transition: all 0.2s cubic-bezier(0.68, 0.02, 0.05, 2.16), color 0.2s, background 0.2s;
