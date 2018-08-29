@@ -9,18 +9,18 @@
     color:#FF0000,#ff6600,#ffff00,#66dd66,#00aaff,#1111ff,#990099,#FF0000,#ff6600,#ffff00,#66dd66,#00aaff,#1111ff,#990099,#FF0000
 }
 
-.b1 {
+#b1 {
     box-shadow: inset 0 0 50px #d900004f, inset 20px 0 80px #ff00493d, inset -20px 0 80px #f55f0f3d, inset 20px 0 300px #ff000036, inset -20px 0 300px #ff00001a, 0 0 50px #ff00005e, -10px 0 80px #ff00004d, 10px 0 80px #ff000040;
     transition: all 0.2s ease-in-out, color 0.1s, background 0.1s;
     }
 
-.b1:hover {
+#b1:hover {
     background-color: #ff00002e;
     box-shadow: inset 0 0 50px #d9000069, inset 20px 0 80px #ff004966, inset -20px 0 80px #ff000075, inset 20px 0 300px #e2082c61, inset -20px 0 300px #ff014726, 0 0 50px #ff000073, -10px 0 80px #ff000069, 10px 0 80px #ff000069;
     transition: all 0.1s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b1:active {
+#b1:active {
     background-color: #ff000099;
     box-shadow: inset 0 0 50px #8b461fc4, inset 20px 0 80px #ff320880, inset -20px 0 80px #f50f0fbd, inset 20px 0 300px #ff000078, inset -20px 0 300px #ff1c1cc9, 0 0 50px #d03b3be6, -10px 0 80px #ff000057, 10px 0 80px #eac05eb3;
     transition: all 0.1s cubic-bezier(0.68, 0.02, 0.05, 2.16), color 0.1s, background 0.2s;
@@ -28,18 +28,18 @@
 
 /*b1 done*/
 
-.b2 {
+#b2 {
     box-shadow: inset 0 0 50px #ff660036, inset 20px 0 80px #ff45004d, inset -20px 0 80px #ff88003b, inset 20px 0 300px #ff660047, inset -20px 0 300px #ff66000f, 0 0 50px #ff660042, -10px 0 80px #ff660057, 10px 0 80px #ff66005c;
     transition: all 0.2s ease-in-out, color 0.1s, background 0.1s;
     }
 
-.b2:hover {
+#b2:hover {
     background-color: #ffa2003d;
     box-shadow: inset 0 0 50px #ff660036, inset 20px 0 80px #f7591e4d, inset -20px 0 80px #d573033b, inset 20px 0 300px #ff660047, inset -20px 0 300px #ff66002b, 0 0 50px #ff660057, -10px 0 80px #ff660057, 10px 0 80px #ff660080;
     transition: all 0.1s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b2:active {
+#b2:active {
     background-color: #ff660091;
     box-shadow: inset 0 0 50px #c16528a1, inset 20px 0 80px #ff6700a3, inset -20px 0 80px #ff88008f, inset 20px 0 300px #ff660047, inset -20px 0 300px #ff660073, 0 0 50px #ff66007a, -10px 0 80px #9a430a80, 10px 0 80px #91ffcacc;
     transition: all 0.1s cubic-bezier(0.68, 0.02, 0.05, 2.16), color 0.1s, background 0.2s;
@@ -47,18 +47,18 @@
 
 /* b2 done */
 
-.b3 {
+#b3 {
     box-shadow: inset 0 0 50px #e5ff002b, inset 20px 0 80px #ffe00030, inset -20px 0 80px #ffff002b, inset 20px 0 300px #ffff003d, inset -20px 0 300px #ffff001f, 0 0 50px #ffff0026, -10px 0 80px #fcff002e, 10px 0 80px #ffff0033;
     transition: all 0.2s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b3:hover {
+#b3:hover {
     background-color: #e5ff0021;
     box-shadow: inset 0 0 50px #e5ff0036, inset 20px 0 80px #ffe00045, inset -20px 0 80px #77f50329, inset 20px 0 300px #ffff002e, inset -20px 0 300px #86ff003b, 0 0 50px #ffff002e, -10px 0 80px #fcff0040, 10px 0 80px #ffff2e38;
     transition: all 0.1s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b3:active {
+#b3:active {
     background-color: #ffff00d4;
     box-shadow: inset 0 0 50px #e5ff0082, inset 20px 0 80px #ffe73978, inset -20px 0 80px #77f50369, inset 20px 0 300px #91fa5a5c, inset -20px 0 300px #98ff2599, 0 0 50px #ffff006b, -10px 0 80px #fcff007a, 10px 0 80px #02ffe3a6;
     transition: all 0.1s cubic-bezier(0.68, 0.02, 0.05, 2.16), color 0.1s, background 0.2s;
@@ -66,38 +66,45 @@
 
 /*b3 done*/
 
-.b4 {
+#b4 {
 box-shadow: inset 0 0 50px #66dd664a, inset 20px 0 80px #05fcf42b, inset -20px 0 80px #69dd6647, inset 20px 0 300px #66dd6624, inset -20px 0 300px #66dd6638, 0 0 50px #66dd6629, -10px 0 80px #8cdb6c3b, 10px 0 80px #5bd35b3d;
     transition: all 0.2s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b4:hover {
+#b4:hover {
     background-color: #00bf323b;
     box-shadow: inset 0 0 50px #66dd663d, inset 20px 0 80px #05fc9745, inset -20px 0 80px #69dd6647, inset 20px 0 300px #66dd6633, inset -20px 0 300px #65e6653b, 0 0 50px #66dd664d, -10px 0 80px #8cdb6c5c, 10px 0 80px #5bd35b47;
     transition: all 0.1s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b4:active {
+#b4:active {
     background-color: #6d66;
     box-shadow: inset 0 0 50px #66dd666b, inset 20px 0 80px #05fc5d5c, inset -20px 0 80px #69dd6647, inset 20px 0 300px #66dd6659, inset -20px 0 300px #44e23969, 0 0 50px #6ef38266, -10px 0 80px #2dd96259, 10px 0 80px #7affa0b0;
     transition: all 0.1s cubic-bezier(0.68, 0.02, 0.05, 2.16), color 0.1s, background 0.2s;
 }
 
+#b4activate {
+    background-color: #6d66;
+    box-shadow: inset 0 0 50px #66dd666b, inset 20px 0 80px #05fc5d5c, inset -20px 0 80px #69dd6647, inset 20px 0 300px #66dd6659, inset -20px 0 300px #44e23969, 0 0 50px #6ef38266, -10px 0 80px #2dd96259, 10px 0 80px #7affa0b0;
+    transition: all 0.2s cubic-bezier(0.68, 0.02, 0.05, 2.16), color 0.2s, background 0.2s;
+}
+
+
 
 /* b4 done*/
 
-.b5 {
+#b5 {
     box-shadow: inset 0 0 50px #0dadfd45, inset 20px 0 80px #047ceb3b, inset -20px 0 80px #08bab236, inset 20px 0 300px #0385e224, inset -20px 0 300px #00aaff21, 0 0 50px #00aaff21, -10px 0 80px #00aaff38, 10px 0 80px #2aaef02b;
     transition: all 0.2s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b5:hover {
+#b5:hover {
     background-color: #00aaff42;
     box-shadow: inset 0 0 50px #0dadfd57, inset 20px 0 80px #047ceb5e, inset -20px 0 80px #08bab257, inset 20px 0 300px #0385e245, inset -20px 0 300px #00aaff3d, 0 0 50px #00aaff4a, -10px 0 80px #00aaff5e, 10px 0 80px #2aaef057;
     transition: all 0.1s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b5:active {
+#b5:active {
     background-color: #00aaff8f;
     box-shadow: inset 0 0 50px #0dadfd8a, inset 20px 0 80px #047ceb82, inset -20px 0 80px #0876ba91, inset 20px 0 300px #0385e27a, inset -20px 0 300px #00aaff82, 0 0 50px #00aaff7a, -10px 0 80px #00aaff8f, 10px 0 80px #8affb08f;
     transition: all 0.1s cubic-bezier(0.68, 0.02, 0.05, 2.16), color 0.1s, background 0.2s;
@@ -106,18 +113,18 @@ box-shadow: inset 0 0 50px #66dd664a, inset 20px 0 80px #05fcf42b, inset -20px 0
 /**/
 
 
-.b6 {
+#b6 {
     box-shadow: inset 0 0 50px #1111ff42, inset 20px 0 80px #1919f330, inset -20px 0 80px #2d2df421, inset 20px 0 300px #1111ff2b, inset -20px 0 300px #1515d71f, 0 0 50px #1111ff2b, -10px 0 80px #1111ff36, 10px 0 80px #1111ff2b;
     transition: all 0.2s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b6:hover {
+#b6:hover {
     background-color: #1111ff24;
     box-shadow: inset 0 0 50px #1111ff3d, inset 20px 0 80px #1919f330, inset -20px 0 80px #7676e530, inset 20px 0 300px #1111ff4d, inset -20px 0 300px #1515d745, 0 0 50px #5d5d9f52, -10px 0 80px #1111ff36, 10px 0 80px #4141cc4a;
     transition: all 0.1s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b6:active {
+#b6:active {
     background-color: #1111ff8a;
     box-shadow: inset 0 0 50px #1111ff6e, inset 20px 0 80px #1919f35e, inset -20px 0 80px #2d2df466, inset 20px 0 300px #1111ff66, inset -20px 0 300px #1515d75e, 0 0 50px #1111ff59, -10px 0 80px #1111ff69, 10px 0 80px #b0d4f7ab;
     transition: all 0.1s cubic-bezier(0.68, 0.02, 0.05, 2.16), color 0.1s, background 0.2s;
@@ -126,21 +133,46 @@ box-shadow: inset 0 0 50px #66dd664a, inset 20px 0 80px #05fcf42b, inset -20px 0
 /**/
 
 
-.b7 {
+#b7 {
     box-shadow: inset 0 0 50px #99009933, inset 20px 0 80px #d40de540, inset -20px 0 80px #ac059542, inset 20px 0 300px #9900991f, inset -20px 0 300px #a10fa142, 0 0 50px #99009936, -10px 0 80px #a000a036, 10px 0 80px #bd01bd42;
     transition: all 0.2s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b7:hover {
+#b7:hover {
 background-color: #99009945;
     box-shadow: inset 0 0 50px #9900994d, inset 20px 0 80px #d40de55e, inset -20px 0 80px #ac059563, inset 20px 0 300px #9900993d, inset -20px 0 300px #a10fa157, 0 0 50px #99009954, -10px 0 80px #a000a054, 10px 0 80px #bd01bd66;
     transition: all 0.1s ease-in-out, color 0.1s, background 0.1s;
 }
 
-.b7:active {
+#b7:active {
     background-color: #99009991;
     box-shadow: inset 0 0 50px #99009982, inset 20px 0 80px #d40de58c, inset -20px 0 80px #ac059580, inset 20px 0 300px #99009982, inset -20px 0 300px #a10fa170, 0 0 50px #b805b86e, -10px 0 80px #ba05bac9, 10px 0 80px #a594eab3;
     transition: all 0.1s cubic-bezier(0.68, 0.02, 0.05, 2.16), color 0.1s, background 0.2s;
 }
 
 
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+  @-webkit-keyframes pulsate {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.3); }
+    100% { -webkit-transform: scale(1); }
+  }
+  @-moz-keyframes pulsate {
+    0% { -moz-transform: scale(1); }
+    50% { -moz-transform: scale(1.3); }
+    100% { -moz-transform: scale(1); }  
+  }
+  @-ms-keyframes pulsate {
+    0% { -ms-transform: scale(1); }
+    50% { -ms-transform: scale(1.3); }
+    100% { -ms-transform: scale(1); }  
+  }
+  @-o-keyframes pulsate {
+    0% { -o-transform: scale(1); }
+    50% { -o-transform: scale(1.3); }
+    100% { -o-transform: scale(1); }  
+  }
